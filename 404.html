@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>星露谷攻略 - Stardew Valley Guide</title>
+    <meta http-equiv="refresh" content="0; url=/" />
+  </head>
+  <body>
+    <script>
+      const path = window.location.pathname;
+      const base = '/stardew-guide';
+      if (path.startsWith(base)) {
+        window.history.replaceState({}, '', base + '/#' + path.slice(base.length));
+      } else {
+        window.history.replaceState({}, '', '/#' + path);
+      }
+      window.location.href = '/';
+    </script>
+  </body>
+</html>
